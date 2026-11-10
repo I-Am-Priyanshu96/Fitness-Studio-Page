@@ -70,5 +70,39 @@
             </div>
         </div>
     </section>
+
+    <section id="calculator" class="section bg-dark">
+        <h2 class="section-title">Membership Cost Calculator</h2>
+        <p class="section-subtitle">Calculate your total cost based on plan and duration</p>
+
+        <div class="calculator-container">
+            <div class="calc-box">
+                <div class="input-group">
+                    <label for="plan-select">Choose Plan:</label>
+                    <select id="plan-select">
+                        <option value="1000">Basic Plan (₹1000/month)</option>
+                        <option value="2000" selected>Standard Plan (₹2000/month)</option>
+                        <option value="3000">Premium Plan (₹3000/month)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="duration-select">Choose Duration:</label>
+                    <select id="duration-select">
+                        <option value="1">1 Month</option>
+                        <option value="3">3 Months (5% Discount)</option>
+                        <option value="6">6 Months (10% Discount)</option>
+                        <option value="12">12 Months (20% Discount)</option>
+                    </select>
+                </div>
+
+                <div class="result-box">
+                    <h3>Total Cost:</h3>
+                    <p class="total-price" id="total-cost">₹2000</p>
+                    <p class="summary-text" id="calculation-details">Selected: Standard Plan for 1 Month</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
