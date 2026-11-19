@@ -298,3 +298,81 @@ nav a:hover {
     font-size: 14px;
     color: #94a3b8;
 }
+
+/* Trainer Profile Cards with Self-Contained Background Graphics */
+.trainers-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.trainer-card {
+    background-color: #1e2430;
+    border: 1px solid #2c3647;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 310px;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.trainer-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff5500;
+}
+
+/* Embedded Vector Trainer Image Slots (Zero External File Dependencies) */
+.trainer-img-box {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid #ff5500;
+}
+
+/* Trainer 1: Strength Coach Marcus */
+.trainer-marcus {
+    background-color: #141822;
+    background-image: url("https://media.istockphoto.com/id/675179390/photo/muscular-trainer-writing-on-clipboard.jpg?s=612x612&w=0&k=20&c=9NKx1AwVMpPY0YBlk5H-hxx2vJSCu1Wc78BKRM9wFq0=");
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    object-position: center top; 
+}
+
+
+/* Trainer 2: HIIT & Cardio Elena */
+.trainer-elena {
+    background-color: #141822;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmtzauemt4w2aJSMJP_klq8tAEVN-YKWTqvwaUVFDJOw&s=10");
+}
+
+/* Trainer 3: Mobility & Yoga David */
+.trainer-david {
+    background-color: #141822;
+    background-image: url("https://t3.ftcdn.net/jpg/02/64/23/78/360_F_264237813_6Yn9JJkBZkuGP9gEgebCA5xVqhqz76v3.jpg");
+}
+
+.trainer-info {
+    padding: 22px;
+}
+
+.trainer-info h3 {
+    font-size: 20px;
+    margin-bottom: 4px;
+    color: #ffffff;
+}
+
+.trainer-role {
+    color: #ff5500;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.trainer-info p {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 5px;
+}
