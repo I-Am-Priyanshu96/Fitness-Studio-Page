@@ -228,3 +228,96 @@ nav a:hover {
     background-color: #ff5500;
     border-color: #ff5500;
 }
+/* Cost Calculator */
+.calculator-container {
+    display: flex;
+    justify-content: center;
+}
+
+.calc-box {
+    background-color: #1e2430;
+    border: 1px solid #2c3647;
+    border-radius: 8px;
+    padding: 30px;
+    width: 100%;
+    max-width: 520px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #e2e8f0;
+}
+
+.input-group select {
+    width: 100%;
+    padding: 11px;
+    background-color: #141822;
+    color: #ffffff;
+    border: 1px solid #2c3647;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.input-group select:focus {
+    outline: none;
+    border-color: #ff5500;
+}
+
+.result-box {
+    background-color: #141822;
+    border: 1px solid #2c3647;
+    border-radius: 6px;
+    padding: 22px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.result-box h3 {
+    font-size: 15px;
+    color: #8c96a5;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.total-price {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff5500;
+    margin-bottom: 6px;
+}
+
+.summary-text {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+/* Trainer Profile Cards with Self-Contained Background Graphics */
+.trainers-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.trainer-card {
+    background-color: #1e2430;
+    border: 1px solid #2c3647;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 310px;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.trainer-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff5500;
+}
