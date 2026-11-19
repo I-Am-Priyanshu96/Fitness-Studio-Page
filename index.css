@@ -298,26 +298,3 @@ nav a:hover {
     font-size: 14px;
     color: #94a3b8;
 }
-
-/* Trainer Profile Cards with Self-Contained Background Graphics */
-.trainers-container {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-.trainer-card {
-    background-color: #1e2430;
-    border: 1px solid #2c3647;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 310px;
-    text-align: center;
-    transition: transform 0.3s, border-color 0.3s;
-}
-
-.trainer-card:hover {
-    transform: translateY(-5px);
-    border-color: #ff5500;
-}
