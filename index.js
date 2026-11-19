@@ -31,6 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    if (durationSelect) {
+        durationSelect.addEventListener("change", function () {
+            calculateTotal();
+        });
+    }
+
         function calculateTotal() {
         if (!planSelect || !durationSelect) return;
 
