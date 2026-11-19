@@ -29,4 +29,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
             calculateTotal();
         });
-    }); 
+    });
+
+        function calculateTotal() {
+        if (!planSelect || !durationSelect) return;
+
+        const monthlyPrice = parseInt(planSelect.value);
+        const durationMonths = parseInt(durationSelect.value);
+
+        let discount = 0;
+        if (durationMonths === 3) {
+            discount = 0.05; // 5% discount
+        } else if (durationMonths === 6) {
+            discount = 0.10; // 10% discount
+        } else if (durationMonths === 12) {
+            discount = 0.20; // 20% discount
+        }
+
+        const grossCost = monthlyPrice * durationMonths;
+        const discountAmount = grossCost * discount;
+        const finalCost = grossCost - discountAmount;
+
+        if (totalCostText) {
+            totalCostText.innerText = "₹" + Math.round(finalCost);
+        }
+
+        if (calculationDetails) {
+            const planName = planSelect.options[planSelect.selectedIndex].text.split(" (")[0];
+            if (discount > 0) {
+                calculationDetails.innerText = planName + " for " + durationMonths + " Months (" + (discount * 100) + "% off applied)";
+            } else {
+                calculationDetails.innerText = planName + " for " + durationMonths + " Month";
+            }
+        }
+    }
+
+    calculateTotal();
+});
+
