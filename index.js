@@ -30,6 +30,26 @@ document.addEventListener("DOMContentLoaded", function () {
             calculateTotal();
         });
     });
+    
+    if (planSelect) {
+        planSelect.addEventListener("change", function () {
+            const selectedPrice = planSelect.value;
+
+            planCards.forEach(function (card) {
+                if (card.getAttribute("data-price") === selectedPrice) {
+                    card.classList.add("active");
+                    const btn = card.querySelector(".select-btn");
+                    if (btn) btn.innerText = "Selected";
+                } else {
+                    card.classList.remove("active");
+                    const btn = card.querySelector(".select-btn");
+                    if (btn) btn.innerText = "Select Plan";
+                }
+            });
+
+            calculateTotal();
+        });
+    }
 
     if (durationSelect) {
         durationSelect.addEventListener("change", function () {
@@ -37,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-        function calculateTotal() {
+    function calculateTotal() {
         if (!planSelect || !durationSelect) return;
 
         const monthlyPrice = parseInt(planSelect.value);
